@@ -1,22 +1,23 @@
 # Bakery Ordering
 
-A WordPress plugin project for bakeries. Implementation has not started; ordering requirements still need to be confirmed.
+A WordPress plugin for bakeries. It provides an administrator-only wholesale dashboard and a bakery catalog workspace for products, photos, and custom customer pricing groups.
 
-## Development setup
+## Preview the dashboard
 
-The repository is the plugin directory itself. Place it inside a local WordPress installation at `wp-content/plugins/bakery-ordering`.
+1. Start the WordPress site in Local.
+2. In WordPress, open **Plugins** and activate **Bakery Ordering**.
+3. Open **Bakery Ordering → Open Product Catalog** to manage products and pricing groups, or open **Open Dashboard Preview**.
 
-- Current Local site: `hos-bakery`
-- Git remote: `https://github.com/robersonj/bakery-plugin.git`
-- Current branch: `main`
+The dashboard opens outside the theme for the full interface. Alternatively, add `[bakery_ordering_dashboard]` to a page. Catalog management requires an administrator (`manage_options`). Products and pricing groups are stored by this plugin; WooCommerce syncing and customer account assignment are planned for a later phase.
 
-There is no plugin entry point yet, so WordPress cannot activate this project as a plugin. No build tools or dependencies have been selected.
+The account, delivery dates, and order quantities shown on the dashboard remain sample content. Product, pricing group, and availability settings are managed in the plugin dashboard. Product weekdays and bakery-wide weekly, recurring holiday, or date-specific closures are saved for the future order workflow; they do not yet filter customer ordering. Other order and account buttons remain previews. The interface adapts to desktop, tablet, and phone widths.
 
-## Project documentation
+## Development
 
-- [Agent instructions](AGENTS.md)
-- [Project scope and open decisions](docs/PROJECT.md)
+There are no dependencies or build steps. PHP templates, scoped CSS, and a small plain JavaScript script provide the interface. Generated pastry artwork is bundled locally in `assets/images/`; the wordmark uses system script fonts and may vary by platform.
+
+- [Project scope](docs/PROJECT.md)
 - [Development log](docs/DEVELOPMENT-LOG.md)
 - [Mac Studio handoff](docs/MAC-STUDIO-HANDOFF.md)
 
-Confirm the first version's ordering workflow before implementing plugin features.
+Ordering workflows and customer access will be designed in the next phase.

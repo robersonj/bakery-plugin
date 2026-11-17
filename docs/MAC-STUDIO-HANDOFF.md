@@ -29,7 +29,7 @@ Check Git status and confirm the latest local commits have been pushed before re
 
 4. If it already exists, inspect `git status`, `git remote -v`, and the current branch before updating it. Preserve any local work. On a clean matching branch, use `git pull --ff-only`.
 5. Open the `bakery-ordering` folder in Codex and read AGENTS.md, PROJECT.md, and DEVELOPMENT-LOG.md.
-6. Start the Local site. Activate the plugin only once a valid plugin entry point has been implemented.
+6. Start the Local site. Activate **Bakery Ordering** in WordPress Plugins, then open **Bakery Ordering → Open Product Catalog**. Sign in as an administrator. Products and groups are managed inside the dashboard preview route.
 
 ## What Git does not transfer
 
@@ -37,4 +37,4 @@ This repository does not include WordPress core, the Local application configura
 
 ## Resume point
 
-Confirm the first version's ordering workflow and the WooCommerce versus standalone decision. No plugin code or dependency installation has been completed.
+Review the dashboard catalog workspace. Product catalog records and custom pricing groups are plugin-owned for now; WooCommerce syncing and customer-to-group assignment are not implemented. No dependencies are needed.
